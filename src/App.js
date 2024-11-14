@@ -9,6 +9,7 @@ import vk from "./img/icons/vk.svg"
 
 
 import Navbar from "./components/navbar/Navbar";
+import Header from "./components/header/Header";
 
 
 
@@ -22,6 +23,7 @@ function App() {
 
       <Navbar />
 
+      <Header />
 
   
 
