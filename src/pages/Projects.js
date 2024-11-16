@@ -1,11 +1,8 @@
 
-// import moon from "../../img/icons/moon.svg"
 
-// import project02 from "../../src/img/projects/02.jpg"
-// import project03 from "../../src/img/projects/03.jpg"
-// import project04 from "../../src/img/projects/04.jpg"
-// import project05 from "../../src/img/projects/05.jpg"
-// import project06 from "../../src/img/projects/06.jpg"
+
+// import {projects} from "./../helpers/projectsList"
+
 
 import Project from "../components/project/Project"
 
@@ -16,9 +13,23 @@ const Projects = () => {
         <div className="container">
             <h2 className="title-1">Projects</h2>
             <ul className="projects">
-             <Project/>
-             <Project/>
-             <Project/>
+{/* {projects.map(()=>{
+
+return(
+
+
+
+)
+
+
+})} */}
+
+{/* {console.log(projects[0])} */}
+
+
+             {/* <Project/> */}
+             {/* <Project/> */}
+             <Project title="Super project"/>
               
 
             </ul>
