@@ -3,9 +3,9 @@ import "./styles/main.css";
 import Navbar from "./components/navbar/Navbar";
 
 import Footer from "./components/footer/Footer";
-import Contacts from "./pages/Contacts";
+// import Contacts from "./pages/Contacts";
 // import Home from "./pages/Home";
-// import Projects from "./pages/Projects";
+import Projects from "./pages/Projects";
 
 
 
@@ -22,9 +22,9 @@ function App() {
    
       {/* <Home /> */}
 
-      {/* <Projects /> */}
+      <Projects />
 
-      <Contacts />
+      {/* <Contacts /> */}
 
 
       <Footer />
