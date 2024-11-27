@@ -3,9 +3,12 @@ import "./styles/main.css";
 import Navbar from "./components/navbar/Navbar";
 
 import Footer from "./components/footer/Footer";
+
+import Project from "./pages/Project";
 // import Contacts from "./pages/Contacts";
 // import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+// import Projects from "./pages/Projects";
+
 
 
 
@@ -22,7 +25,10 @@ function App() {
    
       {/* <Home /> */}
 
-      <Projects />
+      <Project/>
+
+
+      {/* <Projects /> */}
 
       {/* <Contacts /> */}
 
