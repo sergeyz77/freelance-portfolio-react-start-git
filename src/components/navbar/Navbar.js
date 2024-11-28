@@ -1,7 +1,6 @@
+import { NavLink } from 'react-router-dom';
 
 import sun from "../../img/icons/sun.svg"
-
-
 import moon from "../../img/icons/moon.svg"
 
 import './style.css'
@@ -15,9 +14,9 @@ const Navbar = () => {
             <div className="container">
 
                 <div className="nav-row">
-                    <a href="./index.html" className="logo">
+                    <NavLink to="/" className="logo">
                         <strong>Freelancer</strong> portfolio
-                    </a>
+                    </NavLink>
 
                     <button className="dark-mode-btn">
                         <img
@@ -35,22 +34,26 @@ const Navbar = () => {
                     <ul className="nav-list">
 
                         <li className="nav-list__item">
-                            <a
-                                href="./index.html"
-                                className="nav-list__link nav-list__link--active"
-                            >
+                            <NavLink to="/" className="nav-list__link">
                                 Home
-                            </a>
+                            </NavLink>
+
                         </li>
+
+
                         <li className="nav-list__item">
-                            <a href="./projects.html" className="nav-list__link">
+                            <NavLink 	to="/projects" className="nav-list__link">
                                 Projects
-                            </a>
+                            </NavLink>
+                           
                         </li>
+
+
                         <li className="nav-list__item">
-                            <a href="./contacts.html" className="nav-list__link">
+                            <NavLink to="/contacts"className="nav-list__link">
                                 Contacts
-                            </a>
+                            </NavLink>
+
                         </li>
 
                     </ul>
