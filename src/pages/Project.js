@@ -1,27 +1,34 @@
+import {useParams} from "react-router-dom";
 
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
-import img from "./../img/projects/02-big.jpg"
+import {projects} from "./../helpers/projectsList"
+
+
 
 
 
 
 const Project = () => {
 
-
+    const {id} = useParams();
+	const project = projects[id];
+    // console.log(project)
     return (
 		<main class="section">
         <div class="container">
             <div class="project-details">
 
-                <h1 class="title-1">Video service</h1>
-
-                <img src={img} alt="" class="project-details__cover"/>
+                <h1 class="title-1">{project.title}</h1>
+{/* <p>{id}</p> */}
+                <img src={project.imgBig} alt={project.title} class="project-details__cover"/>
 
                 <div class="project-details__desc">
-                    <p>Skills: React, Node.js, MongoDB</p>
+                    <p>{project.skills}</p>
                 </div>
 
-               <BtnGitHub/>
+                {project.gitHubLink && (
+						<BtnGitHub link="https://github.com" />
+					)}
 
 
 
