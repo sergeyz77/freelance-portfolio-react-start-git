@@ -5,12 +5,16 @@ import moon from './moon.svg';
 import './style.css';
 
 const BtnDarkMode = () => {
- 
 
+	const toggleDarkMode = () => {
+		alert("test")
+	};
   
-
+	
 	return (
-		<button className="dark-mode-btn">
+		<button className="dark-mode-btn"
+		onClick={toggleDarkMode}
+		>
 		<img
 			src={sun}
 			alt="Light mode"
