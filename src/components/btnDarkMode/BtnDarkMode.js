@@ -12,8 +12,14 @@ const BtnDarkMode = () => {
 
 
     useEffect(() => {
-        console.log("useEffect")
-	}, []);
+       
+		if (darkMode === 'dark') {
+			document.body.classList.add('dark');
+		} else {
+			document.body.classList.remove('dark');
+		}
+
+	}, [darkMode]);
 
 
 
