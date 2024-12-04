@@ -1,17 +1,25 @@
 
 
+import { useState } from 'react';
+
 import sun from './sun.svg';
 import moon from './moon.svg';
 import './style.css';
 
 const BtnDarkMode = () => {
 
+	const [darkMode, setDarkMode] =useState('light')
+
+
 	const toggleDarkMode = () => {
-		alert("test")
+		setDarkMode('dark')
+		
 	};
   
 	
 	return (
+<>
+		{darkMode}
 		<button className="dark-mode-btn"
 		onClick={toggleDarkMode}
 		>
@@ -26,6 +34,7 @@ const BtnDarkMode = () => {
 			className="dark-mode-btn__icon"
 		/>
 	</button>
+	</>
 	);
 };
 
