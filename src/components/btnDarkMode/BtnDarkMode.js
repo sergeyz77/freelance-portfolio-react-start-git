@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useRef } from 'react';
+
 import sun from './sun.svg';
 import moon from './moon.svg';
 import './style.css';
@@ -9,14 +11,20 @@ import './style.css';
 const BtnDarkMode = () => {
 
 	const [darkMode, setDarkMode] =useState('light')
-
+const btnRef=useRef(null)
 
     useEffect(() => {
-       
+   
 		if (darkMode === 'dark') {
 			document.body.classList.add('dark');
+			btnRef.current.classList.add('dark-mode-btn--active')
+// console.log(btnRef)
+// console.log(btnRef.current)
+
 		} else {
 			document.body.classList.remove('dark');
+			btnRef.current.classList.remove('dark-mode-btn--active')
+
 		}
 
 	}, [darkMode]);
@@ -36,9 +44,10 @@ const BtnDarkMode = () => {
 	
 	return (
 <>
-		{darkMode}
+		{/* {darkMode} */}
 		<button className="dark-mode-btn"
 		onClick={toggleDarkMode}
+		ref={btnRef}
 		>
 		<img
 			src={sun}
