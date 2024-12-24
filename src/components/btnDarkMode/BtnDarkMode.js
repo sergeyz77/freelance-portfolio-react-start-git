@@ -4,7 +4,7 @@
 import { useLocalStorage } from "./../../utils/useLocalStorage"
 
 import { useEffect } from 'react';
-import { useRef } from 'react';
+
 import detectDarkMode from '../../utils/detectDarkMode';
 
 import sun from './sun.svg';
@@ -18,19 +18,19 @@ const BtnDarkMode = () => {
     const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectDarkMode());
 
 
-	const btnRef = useRef(null)
+	
 
 	useEffect(() => {
 
 		if (darkMode === 'dark') {
 			document.body.classList.add('dark');
-			btnRef.current.classList.add('dark-mode-btn--active')
+		
 			// console.log(btnRef)
 			// console.log(btnRef.current)
 
 		} else {
 			document.body.classList.remove('dark');
-			btnRef.current.classList.remove('dark-mode-btn--active')
+		
 
 		}
 
@@ -56,12 +56,16 @@ const BtnDarkMode = () => {
 	};
 
 
+	const btnNormal = 'dark-mode-btn';
+    const btnActive = 'dark-mode-btn dark-mode-btn--active';
+
+
 	return (
 		<>
 			{/* {darkMode} */}
-			<button className="dark-mode-btn"
+			<button className={darkMode === 'dark' ? btnActive : btnNormal}
 				onClick={toggleDarkMode}
-				ref={btnRef}
+				
 			>
 				<img
 					src={sun}
